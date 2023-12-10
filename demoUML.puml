@@ -1,0 +1,424 @@
+@startuml
+class englishlearningapp.englearning.Controller.SceneController {
+# {static} Stage stage
+# {static} Scene scene
++ {static} AnchorPane defaultRoot
++ {static} AnchorPane searchRoot
++ {static} AnchorPane gameRoot
++ {static} AnchorPane translateRoot
++ {static} AnchorPane vocabRoot
++ {static} AnchorPane connectRoot
++ {static} AnchorPane exitRoot
++ {static} AnchorPane addViewRoot
++ {static} AnchorPane modifyViewRoot
++ {static} AnchorPane aboutRoot
++ {static} AnchorPane guideRoot
++ {static} void switchSceneNormal(ActionEvent,Parent)
++ {static} void switchScene(Event,Parent)
++ {static} void switchScene(ActionEvent,Parent)
++ {static} void switchScene(MouseEvent,Parent)
++ {static} void switchScene(KeyEvent,Parent)
++ {static} AnchorPane getCurrentPane(KeyEvent)
++ {static} void updateScene(KeyEvent,String,Node)
+}
+class englishlearningapp.englearning.TextToSpeech.TTS {
+- {static} VoiceProvider tts
+- {static} boolean isConnected
++ {static} boolean isIsConnected()
++ {static} void initApiVoice(String)
++ {static} void playSpeaker()
++ {static} void main(String[])
+}
+class englishlearningapp.englearning.Controller.InstructionVocabController {
+- WebView webview
+- WebEngine webEngine
++ void initialize(URL,ResourceBundle)
+}
+class englishlearningapp.englearning.Controller.LookingUpController {
++ Button searchBtn
++ Button gameBtn
++ Button translateBtn
+- TextField textInput
+- TextArea definitionArea
+- String queryString
+- String wordSelected
++ void setTextInput(String)
++ void setDefinitionArea(String)
++ void clickGame(ActionEvent)
++ void clickTranslate(ActionEvent)
++ void onAddBtn(ActionEvent)
++ void onDelete(ActionEvent)
++ void onCustom(ActionEvent)
++ void inputWordHanddle(KeyEvent)
++ void onIconClicked(MouseEvent)
++ void onClickAbout(ActionEvent)
++ void onClickGuide(ActionEvent)
+}
+class englishlearningapp.englearning.Game.GameTimer {
+- Timer timer
+- int counter
+- Clip clip
++ int getCounter()
++ Timer getTimer()
++ void setTimer(Timer)
++ void excuteTask(TimerTask)
++ void playAudio()
++ void stopAudio()
+}
+class englishlearningapp.englearning.Controller.AddWordController {
+- TextArea nameArea
+- TextArea pronunciationArea
+- TextArea definitionArea
++ void addWord(Dictionary,Word)
++ boolean validate(Word)
++ void onAddWord(ActionEvent)
++ void onExit(ActionEvent)
++ {static} void main(String[])
+}
+class englishlearningapp.englearning.CustomAnimation.FlipPageAnimation {
+- RotateTransition rotateTransition
++ void play()
++ void setOnFinished(Runnable)
+}
+class englishlearningapp.englearning.API_Connection.TranslateAPIConnection {
+- {static} HttpURLConnection connection
+- {static} boolean isConnected
++ {static} boolean isIsConnected()
++ {static} String translateText(String,String,String)
++ {static} void main(String[])
+}
+class englishlearningapp.englearning.questionGame.BotAnswerGenerator {
+- {static} ArrayList<String> chosse
++ TreeMap<String,Integer> vocab
++ {static} String[] vocabulary
+- {static} int vocabularySize
+- {static} Random random
+~ {static} Random rd
++ {static} String generateRandomBotAnswers()
++ {static} boolean checkWord(ArrayList<String>,String)
++ {static} boolean checkPlayerWord(String)
++ {static} boolean checkStyleWorld(String)
++ {static} String getWordStartingWith(char)
+}
+class englishlearningapp.englearning.questionGame.Question_answer_vocab {
+- Random random
+- int randomIndex
+- List<String> question
+- List<String> answer
+- List<String> ipa
++ List<String> EnteredWord
++ String getQuestion(int)
++ int getRandom()
++ void setRandom(int)
++ boolean checkEnterWord(String)
++ String getAnswer(int)
++ String getAnswer(String)
++ String getrandomAnswer(int)
+}
+class englishlearningapp.englearning.Controller.InstructionConnectController {
+- WebView webview
+- WebEngine webEngine
++ void initialize(URL,ResourceBundle)
+}
+class englishlearningapp.englearning.JDBCConnection.InsertTask {
+- Word word
+# Void call()
+}
+class englishlearningapp.englearning.Controller.ConnectController {
+- ConnectGame connectGame
+- TextField playerAnswerTextField
+- Button answerTextArea
+- ImageView imageScore
+# Circle c1
+~ TextArea timerNumber
+- TextField score
+- ImageView imageWay
++ void startGame()
++ void handlePlayer(KeyEvent)
++ void clickExitConnect(ActionEvent)
++ void initialize()
+}
+class englishlearningapp.englearning.Controller.DefaultViewController {
++ Button searchBtn
++ Button gameBtn
++ Button translateBtn
++ void clickSearch(ActionEvent)
++ void clickGame(ActionEvent)
++ void clickTranslate(ActionEvent)
++ void onIconClicked(MouseEvent)
++ void getStarted(ActionEvent)
++ void onClickAbout(ActionEvent)
++ void onClickGuide(ActionEvent)
+}
+class englishlearningapp.englearning.JDBCConnection.ModifyTask {
+- Word word
+# Void call()
+}
+class englishlearningapp.englearning.TextToSpeech.TexttoSpeechTask {
+- String wordSelected
+# Void call()
+}
+class englishlearningapp.englearning.Game.VocabGame {
+- Clip clip
+- GameTimer gameTimer
+- int score
+- int quesnumber
+- Random random
+- int randomIndex
+- TimerTask currentTask
+~ Question_answer_vocab questionAnswer
++ GameTimer getGameTimer()
++ void setGameTimer(GameTimer)
++ void resetGame(TextField,Button,TextArea,TextField,Circle)
++ void playTimer(KeyEvent,TextArea,Circle,TextField,Button,TextField)
++ int getRandom()
++ void setRandom(int)
++ int getQuesNumber()
++ void setQuesNumber(int)
++ void setScore(int)
++ int getScore()
++ boolean checkCorrect(TextArea,Button)
++ void loadRandomQuestion(TextArea,Button,Button,TextArea)
++ void playTimer(ActionEvent,Button,Button,TextArea,TextArea,TextArea,Button)
++ void playAudio(String)
++ void stopAudio()
++ void stopTimer()
++ void resetGame(ActionEvent,Button,Button,TextArea,TextArea,TextArea,Button)
+}
+class englishlearningapp.englearning.JDBCConnection.JDBC_DeleteData {
++ {static} void deleteData(Word)
+}
+class englishlearningapp.englearning.Controller.AboutUsController {
+- WebView webview
+- WebEngine webEngine
++ void initialize(URL,ResourceBundle)
++ void clickSearch(ActionEvent)
++ void onIconClicked(MouseEvent)
++ void clickGame(ActionEvent)
++ void clickTranslate(ActionEvent)
++ void onClickGuide(ActionEvent)
+}
+class englishlearningapp.englearning.Controller.GuideController {
+- WebView webview
+- WebEngine webEngine
++ void initialize(URL,ResourceBundle)
++ void clickSearch(ActionEvent)
++ void onIconClicked(MouseEvent)
++ void clickGame(ActionEvent)
++ void clickTranslate(ActionEvent)
++ void onClickAbout(ActionEvent)
+}
+class englishlearningapp.englearning.Controller.ModifyController {
+- TextArea nameArea
+- TextArea pronunciationArea
+- TextArea definitionArea
++ TextArea getNameArea()
++ void setNameArea(String)
++ TextArea getPronunciationArea()
++ void setPronunciationArea(String)
++ TextArea getDefinitionArea()
++ void setDefinitionArea(String)
++ void modify(ActionEvent)
++ void exit(ActionEvent)
+}
+class englishlearningapp.englearning.DictionaryPackage.Word {
+- int id
+- String name
+- String pronunciation
+- String definition
++ int getId()
++ void setId(int)
++ String getName()
++ void setName(String)
++ String getPronunciation()
++ void setPronunciation(String)
++ String getDefinition()
++ void setDefinition(String)
+}
+class englishlearningapp.englearning.Game.ConnectGame {
+- int Score
++ List<String> EnteredWord
++ GameTimer gmt
+- TimerTask currentTask
+- Clip clip
++ {static} RotateTransition rt
++ int getScore()
++ void setScore(int)
++ boolean checkEnterWord(String)
++ GameTimer getTimer()
++ void setCurrentTask(TimerTask)
++ void resetGame(TextField,Button,TextArea,TextField,Circle)
++ void stopTimer()
++ void playAudio(String)
++ void stopAudio()
++ void playTimer(KeyEvent,TextArea,Circle,TextField,Button,TextField)
++ void playTimer(ActionEvent,Button,Button,TextArea,TextArea,TextArea,Button)
++ void resetGame(ActionEvent,Button,Button,TextArea,TextArea,TextArea,Button)
++ {static} void setRotate(Circle,boolean,int,int)
++ String checkBotAnswer(String)
+}
+class englishlearningapp.englearning.Controller.AlertController {
++ {static} void CustomAlert(ActionEvent)
++ {static} void alertWrong(ActionEvent,String)
++ {static} void alertEndGame(KeyEvent,String,String)
++ {static} void alertEndGame(ActionEvent,String,String)
++ {static} void showCustomPopUp(String,String)
++ {static} void showNotConnectInternet()
+}
+class englishlearningapp.englearning.DictionaryPackage.WordComparator {
++ int compare(Word,Word)
+}
+class englishlearningapp.englearning.DictionaryPackage.Dictionary {
++ void sort()
++ int findWord(Word)
+}
+abstract class englishlearningapp.englearning.Game.Game {
++ {abstract}void resetGame(TextField,Button,TextArea,TextField,Circle)
++ {abstract}void playTimer(KeyEvent,TextArea,Circle,TextField,Button,TextField)
++ {abstract}void playTimer(ActionEvent,Button,Button,TextArea,TextArea,TextArea,Button)
++ {abstract}void resetGame(ActionEvent,Button,Button,TextArea,TextArea,TextArea,Button)
+}
+class englishlearningapp.englearning.App {
+- {static} Dictionary dictionary
++ {static} Dictionary getDictionary()
++ void init()
++ void start(Stage)
++ {static} void main(String[])
+}
+class englishlearningapp.englearning.API_Connection.TranslateInitTask {
+- String langfrom
+- String langto
+- String text
+- HttpURLConnection connection
+# HttpURLConnection call()
+}
+class englishlearningapp.englearning.API_Connection.TranslateTask {
+- TextArea inputLang
+- TextArea outputLang
+- Button translateBtn
+- String text
+# String call()
+}
+class englishlearningapp.englearning.JDBCConnection.JDBC_InsertData {
++ {static} void insertWord(Word)
+}
+class englishlearningapp.englearning.JDBCConnection.DeleteTask {
+- Word word
+# Void call()
+}
+class englishlearningapp.englearning.Controller.TranslateViewController {
+- Button switchBtn
+- Button searchBtn
+- Button gameBtn
+- Button translateBtn
+- TextArea inputText
+- TextArea outputText
+- TextArea inputLang
+- TextArea outputLang
+~ String res
++ void clickGame(ActionEvent)
++ void clickSearch(ActionEvent)
++ void onTranslate()
++ void switchLanguage()
++ void onIconClicked(MouseEvent)
++ void onClickAbout(ActionEvent)
++ void onClickGuide(ActionEvent)
+}
+class englishlearningapp.englearning.JDBCConnection.JDBC_RetrieveData {
+- {static} TreeMap<String,Integer> dataWords
+- {static} HashMap<Integer,String> pronuntiations
+- {static} HashMap<Integer,String> definitons
+- {static} List<String> questionWords
+- {static} List<String> questionIPA
+- {static} List<String> questionMeaning
++ {static} void retrieveQuestionWords()
++ {static} void retrieveQuestionIPA()
++ {static} void retrieveQuestionMeaning()
++ {static} void retrieveWordData()
++ {static} void retrievePronunciation()
++ {static} void retrieveDefinition()
++ {static} List<String> getQuestionWords()
++ {static} List<String> getQuestionIPA()
++ {static} List<String> getQuestionMeaning()
++ {static} TreeMap<String,Integer> getDataWords()
++ void setDataWords(TreeMap<String,Integer>)
++ {static} HashMap<Integer,String> getPronuntiations()
++ {static} void setPronuntiations(HashMap<Integer,String>)
++ {static} HashMap<Integer,String> getDefinitons()
++ {static} void setDefinitons(HashMap<Integer,String>)
++ {static} String[] retrieveVocabulary()
++ {static} void main(String[])
+}
+class englishlearningapp.englearning.JDBCConnection.JDBC_ModifyData {
++ {static} void updateData(Word)
+}
+class englishlearningapp.englearning.Controller.GameViewController {
++ Button searchBtn
++ Button gameBtn
++ Button translateBtn
++ ImageView vocabPic
++ ImageView linkingPic
++ Button vocabBtn
++ Button connectBtn
+- TextArea Scoregame
+- int score
+- int quesnumber
++ int getQuesNumber()
++ void setQuesNumber(int)
++ void setScore(int)
++ int getScore()
++ String toString(int)
++ void setTextScore(String)
++ void endGame(ActionEvent,String)
++ void clickSearch(ActionEvent)
++ void clickTranslate(ActionEvent)
++ void clickGame(ActionEvent)
++ void clickVocab(ActionEvent)
++ void clickConnect(ActionEvent)
++ void onIconClicked(MouseEvent)
++ void onClickAbout(ActionEvent)
++ void onClickGuide(ActionEvent)
+}
+class englishlearningapp.englearning.Controller.VocabViewController {
+- MediaView leftMedia
+- Media media
+- MediaPlayer mediaPlayer
+- TextArea timerbox
+- TextArea questionVocab
+- Button answerA
+- Button answerB
+- Button handleGame
+- TextArea Scoregame
+- VocabGame vocabGame
+~ Question_answer_vocab questionAnswer
++ void handleAnswerA(ActionEvent)
++ void handleAnswerB(ActionEvent)
++ void handleInformation(ActionEvent)
++ void onExit(ActionEvent)
++ void clickStart(ActionEvent)
++ void init(String)
++ void playMedia()
++ void stopMedia()
+}
+class englishlearningapp.englearning.JDBCConnection.JDBC_Connect {
+# {static} Connection getJDBCConnection()
++ {static} void main(String[])
+}
+
+
+javafx.fxml.Initializable <|.. englishlearningapp.englearning.Controller.InstructionVocabController
+javafx.fxml.Initializable <|.. englishlearningapp.englearning.Controller.InstructionConnectController
+javafx.concurrent.Task <|-- englishlearningapp.englearning.JDBCConnection.InsertTask
+javafx.concurrent.Task <|-- englishlearningapp.englearning.JDBCConnection.ModifyTask
+javafx.concurrent.Task <|-- englishlearningapp.englearning.TextToSpeech.TexttoSpeechTask
+englishlearningapp.englearning.Game.Game <|-- englishlearningapp.englearning.Game.VocabGame
+javafx.fxml.Initializable <|.. englishlearningapp.englearning.Controller.AboutUsController
+javafx.fxml.Initializable <|.. englishlearningapp.englearning.Controller.GuideController
+englishlearningapp.englearning.Game.Game <|-- englishlearningapp.englearning.Game.ConnectGame
+englishlearningapp.englearning.DictionaryPackage.Comparator <|.. englishlearningapp.englearning.DictionaryPackage.WordComparator
+englishlearningapp.englearning.DictionaryPackage.ArrayList <|-- englishlearningapp.englearning.DictionaryPackage.Dictionary
+javafx.application.Application <|-- englishlearningapp.englearning.App
+javafx.concurrent.Task <|-- englishlearningapp.englearning.API_Connection.TranslateInitTask
+javafx.concurrent.Task <|-- englishlearningapp.englearning.API_Connection.TranslateTask
+javafx.concurrent.Task <|-- englishlearningapp.englearning.JDBCConnection.DeleteTask
+@enduml
