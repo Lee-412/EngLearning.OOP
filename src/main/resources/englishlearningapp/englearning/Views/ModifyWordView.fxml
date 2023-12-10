@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="563.0" prefWidth="894.0" style="-fx-background-color: #4CB5E2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="englishlearningapp.englearning.Controller.ModifyController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../src/image/FlatBack.png" />
+         </image></ImageView>
+      <HBox layoutX="-6.0" prefHeight="500.0" prefWidth="906.0">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="300.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="175.0" prefWidth="300.0" style="-fx-border-radius: 2; -fx-border-color: black;" text="Name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="nameArea" editable="false" prefHeight="425.0" prefWidth="300.0" />
+               </children></VBox>
+            <VBox prefHeight="600.0" prefWidth="300.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="175.0" prefWidth="300.0" style="-fx-border-color: black;" text="Pronunciaton">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="pronunciationArea" prefHeight="425.0" prefWidth="300.0" />
+               </children></VBox>
+            <VBox prefHeight="600.0" prefWidth="300.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="176.0" prefWidth="300.0" style="-fx-border-color: black;" text="Definition">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="definitionArea" prefHeight="426.0" prefWidth="300.0" />
+               </children>
+            </VBox>
+         </children></HBox>
+      <Button layoutX="778.0" layoutY="515.0" mnemonicParsing="false" onAction="#modify" prefHeight="43.0" prefWidth="96.0" text="Modify" />
+      <Button layoutX="5.0" layoutY="515.0" mnemonicParsing="false" onAction="#exit" prefHeight="43.0" prefWidth="104.0" text="Exit" />
+   </children>
+</AnchorPane>

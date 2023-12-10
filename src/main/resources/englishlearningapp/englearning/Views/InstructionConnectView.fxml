@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<DialogPane xmlns="http://javafx.com/javafx/21"
+            stylesheets="@../src/connect-style.css"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="englishlearningapp.englearning.Controller.InstructionConnectController">
+   <content>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <WebView fx:id="webview" layoutX="82.0" layoutY="57.0" prefHeight="326.0" prefWidth="450.0" />
+         </children>
+      </AnchorPane>
+   </content>
+   <buttonTypes>
+      <ButtonType fx:constant="OK" />
+   </buttonTypes>
+</DialogPane>

@@ -1,0 +1,363 @@
+.classBtn {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+.subGameBtn {
+    -fx-background-color: #96F0FA;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+
+}
+.subGameBtn:hover {
+    -fx-background-color: #17D3FA;
+    -fx-border-color: #11F6FA;
+    -fx-cursor: hand;
+    -fx-effect:dropshadow(one-pass-box,white,8,0.0,2,0);
+}
+.classCRUDBtn {
+    -fx-background-radius: 15;
+    -fx-background-color: #ffefff ;
+}
+.classCRUDBtn: hover {
+    -fx-cursor: hand;
+    -fx-effect:dropshadow(one-pass-box,white,8,0.0,2,0);
+}
+
+.classSubBtn {
+    -fx-background-color: #f39b6b;
+    -fx-background-radius: 10;
+}
+.classSubBtn:hover {
+    -fx-background-color: #F38D6B;
+    -fx-cursor: hand;
+    -fx-effect:dropshadow(one-pass-box,white,8,0.0,2,0);
+}
+.classBtn:hover {
+    -fx-border-color: #fff;
+    -fx-cursor: hand;
+    -fx-background-color: #4CB5E2;
+    -fx-effect:dropshadow(one-pass-box,white,8,0.0,2,0);
+}
+.wordListView {
+    -fx-translate-x: 25;
+    -fx-translate-y: 178;
+    -fx-pref-height: 353;
+    -fx-pref-width: 151;
+}
+.wordListView:hover {
+    -fx-cursor: hand;
+}
+.wordListView .list-cell:filled:selected:focused, .wordListView .list-cell:filled:selected {
+
+     -fx-background-color: linear-gradient(#333 0%, #777 25%, #aaa 75%, #eee 100%);/*linear-gradient(#333 0%, #777 25%, #aaa 75%, #eee 100%)*/
+     -fx-text-fill: black;
+ }
+ .wordListView .list-cell {
+    -fx-text-fill: black;
+    -fx-border-color: white;
+    -fx-font-family: Arial;
+    -fx-font-size: 13px;
+  }
+ .wordListView .list-cell:odd { -fx-background-color: white; -fx-opacity: 1; }
+ .wordListView .list-cell:even { -fx-background-color: #EAD8EA; -fx-opacity: 1; }
+ .wordListView .list-cell:filled:hover {
+     -fx-background-color: #2FF5C6;
+     -fx-text-fill: white;
+ }
+.wordListView .scroll-bar:vertical {
+     -fx-background-color:#2c365d;
+ }
+
+.wordListView .increment-button ,.list-view .decrement-button {
+     -fx-background-color:transparent;
+     -fx-border-color:transparent;
+ }
+
+.wordListView .scroll-bar:vertical .thumb {
+     -fx-background-color:#455491;
+     -fx-background-insets: 5, 5, 5;
+     -fx-background-radius: 5;
+ }
+
+.wordListView .scroll-bar:horizontal {
+     -fx-scale-x: 0;
+ }
+
+.textBox .content{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+}
+.speaker {
+    -fx-translate-x: 758;
+    -fx-translate-y: 494;
+    -fx-cursor: hand;
+}
+
+.speaker-container:hover {
+    -fx-cursor: hand;
+    -fx-background-color: gray;
+    -fx-opacity: 0.3;
+}
+.textBox {
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-radius: 15;
+    -fx-border-width: 3;
+}
+.textBox:hover {
+    -fx-border-color: #fff;
+}
+
+.textBox .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.textBox .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+.textBox .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+#text-translate {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-radius: 15;
+    -fx-border-width: 3;
+}
+#text-translate .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+#text-translate .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+
+
+#text-translate .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+.switchBtn {
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+}
+.switchBtn:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #4CB5E2;
+    -fx-opacity: 0.8;
+}
+.centeredTextArea .scroll-pane .content .text {
+    -fx-text-alignment: center;
+}
+#from-lang .scroll-pane .content {
+    -fx-background-color: transparent;
+}
+#from-lang .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+#from-lang .scroll-pane{
+    -fx-background-color: transparent;
+}
+#from-lang {
+    -fx-background-color: #404040;
+    -fx-text-fill: #E4FFFF;
+    -fx-background-radius: 15;
+    -fx-border-radius: 10;
+    -fx-border-color: #E4FFFF;
+    -fx-border-width: 2;
+    -fx-opacity: 0.8;
+}
+#from-lang .scroll-pane .content .text{
+    -fx-text-fill: #E4FFFF ;
+}
+#to-lang .scroll-pane .content {
+    -fx-background-color: transparent;
+}
+#to-lang .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+#to-lang .scroll-pane{
+    -fx-background-color: transparent;
+}
+#to-lang {
+    -fx-background-color: #E7FAFA;
+    -fx-text-fill: #404040;
+    -fx-background-radius: 15;
+    -fx-border-radius: 10;
+    -fx-border-color: #404040;
+    -fx-border-width: 2;
+    -fx-opacity: 0.8;
+}
+#to-lang .scroll-pane .content .text{
+    -fx-text-fill: #404040 ;
+}
+.translate-btn {
+    -fx-background-color: #E7FAFA;
+    -fx-text-fill: #404040;
+}
+
+.translate-btn:hover {
+     -fx-background-color: #16F5B1;
+     -fx-text-fill: #E7FAFA;
+     -fx-cursor: hand;
+     -fx-effect:dropshadow(one-pass-box,white,8,0.0,2,0);
+}
+
+.radio-button {
+    -fx-padding: 12 12 12 12;
+}
+/*timerText css*/
+.timer-text {
+    -fx-background-color: transparent;
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+}
+.timer-text .text {
+    -fx-text-alignment: center;
+    -fx-translate-y: 5;
+
+}
+.timer-text .scroll-pane .content {
+    -fx-background-color: transparent;
+
+}
+.timer-text .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.timer-text .scroll-pane{
+    -fx-background-color: transparent;
+}
+/*webview intruct*/
+/*.instruction-connect {
+    -fx-background-color: linear-gradient(to right, yellow, magenta);
+}*/
+
+/*CSS connect game*/
+.buttonConnect {
+    -fx-background-color: #f39b6b;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+}
+
+.buttonConnect:hover {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.scoreConnect {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-font-size: 32px;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+}
+.buttonHome {
+
+    -fx-background-color: transparent;
+    -fx-background-radius: 5;
+    -fx-border-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 3vw;
+    -fx-padding: 1vw 2vw;
+
+    -fx-alignment: center;
+    -fx-font-size: 32px;
+
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-border-style: solid;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s;
+}
+
+.buttonHome:hover {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-border-color: #3498db;
+}
+
+/*vocabview*/
+.timer-rectagle .text {
+    -fx-text-alignment: center;
+    -fx-translate-y: 5;
+}
+.timer-rectagle {
+    -fx-background-color: transparent;
+    -fx-text-fill: maroon;
+}
+.timer-rectagle .scroll-pane .content {
+    -fx-background-color: transparent;
+}
+.timer-rectagle .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.timer-rectagle .scroll-pane{
+    -fx-background-color: transparent;
+}
+
+.question-box .text {
+    -fx-text-alignment: center;
+}
+.question-box {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+}
+.question-box .scroll-pane .content {
+    -fx-background-color: transparent;
+}
+.question-box .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.question-box .scroll-pane{
+    -fx-background-color: transparent;
+}
+
+.score-box .text{
+    -fx-text-alignment: center;
+}
+.score-box {
+    -fx-background-color: transparent;
+}
+.score-box .scroll-pane .content {
+    -fx-background-color: transparent;
+}
+.score-box .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.score-box .scroll-pane{
+    -fx-background-color: transparent;
+}
+
+.vocab-btn {
+    -fx-background-color: #4CB5E2;
+    -fx-background-radius: 20;
+    -fx-opacity: 0.8;
+    -fx-text-fill: white;
+}
+.vocab-btn:hover {
+    -fx-background-color: white;
+    -fx-opacity: 0.8;
+    -fx-text-fill: #4CB5E2;
+    -fx-cursor: hand;
+}
+
+.vocab-exit {
+    -fx-background-radius: 10;
+    -fx-background-color: maroon;
+    -fx-text-fill: white;
+}
+.vocab-exit:hover{
+    -fx-cursor: hand;
+    -fx-effect:dropshadow(one-pass-box,white,8,0.0,2,0);
+}
+

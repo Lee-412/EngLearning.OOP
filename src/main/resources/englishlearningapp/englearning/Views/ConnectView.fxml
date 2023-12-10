@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../src/connect-style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="englishlearningapp.englearning.Controller.ConnectController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true">
+            <image>
+                <Image url="@../src/image/BDust2.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="61.0" layoutY="68.0" mnemonicParsing="false" onAction="#clickExitConnect" prefHeight="46.0" prefWidth="65.0" styleClass="buttonHome" text="home" />
+      <Pane layoutX="175.0" layoutY="81.0" prefHeight="398.0" prefWidth="552.0">
+
+         <children>
+<!--            <TextArea fx:id="answerTextArea" accessibleRole="BUTTON" editable="false" layoutX="196.0" layoutY="199.0" prefHeight="46.0" prefWidth="161.0" styleClass="textConnect" />-->
+
+             <TextField fx:id="playerAnswerTextField" layoutX="293.0" layoutY="296.0" prefHeight="46.0" prefWidth="228.0" promptText="ENTER YOUR WORDS" />
+            <TextField fx:id="score" alignment="CENTER" editable="false" layoutX="223.0" layoutY="14.0" prefHeight="45.0" prefWidth="106.0" styleClass="scoreConnect">
+               <font>
+                  <Font name="Verdana Pro Bold" size="12.0" />
+               </font></TextField>
+            <Button fx:id="answerTextArea" layoutX="48.0" layoutY="292.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="228.0" styleClass="buttonConnect" />
+            <ImageView fx:id="imageWay" fitHeight="150.0" fitWidth="423.0" layoutX="74.0" layoutY="124.0" pickOnBounds="true" />
+         </children>
+      </Pane>
+      <Pane layoutX="777.0" layoutY="41.0" prefHeight="94.0" prefWidth="94.0" style="-fx-background-color: black; -fx-background-radius: 50%;">
+         <children>
+            <Circle fx:id="c1" layoutX="47.0" layoutY="47.0" radius="36.0" stroke="#06afe7" strokeType="INSIDE" strokeWidth="5.0" style="-fx-stroke-dash-array: 21;" />
+            <TextArea fx:id="timerNumber" editable="false" layoutX="23.0" layoutY="25.0" prefHeight="45.0" prefWidth="38.0" styleClass="timer-text">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextArea>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

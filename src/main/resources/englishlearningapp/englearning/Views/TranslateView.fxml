@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="englishlearningapp.englearning.Controller.TranslateViewController">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true">
+            <image>
+                <Image url="@../src/image/FlatBack.png" />
+            </image>
+        </ImageView>
+
+        <Pane prefHeight="96.0" prefWidth="900.0">
+            <children>
+                <ImageView fitHeight="120.0" fitWidth="158.0" onMouseClicked="#onIconClicked" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../src/image/textOff.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="657.0" layoutY="9.0" mnemonicParsing="false" onAction="#onClickAbout" prefHeight="44.0" prefWidth="115.0" styleClass="classSubBtn" text="About Us" textFill="#fffafd">
+                    <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                    </font></Button>
+                <Button layoutX="778.0" layoutY="9.0" mnemonicParsing="false" onAction="#onClickGuide" prefHeight="44.0" prefWidth="115.0" styleClass="classSubBtn" text="Guide" textFill="#fffafd">
+                    <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                    </font></Button>
+                <Button fx:id="searchBtn" layoutX="158.0" layoutY="9.0" mnemonicParsing="false" onAction="#clickSearch" prefHeight="44.0" prefWidth="115.0" styleClass="classBtn" text="Search" textFill="#fffafd">
+                    <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                    </font></Button>
+                <Button fx:id="gameBtn" layoutX="273.0" layoutY="9.0" mnemonicParsing="false" onAction="#clickGame" prefHeight="44.0" prefWidth="115.0" styleClass="classBtn" text="Game" textFill="#fffafd">
+                    <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                    </font></Button>
+                <Button fx:id="translateBtn" layoutX="388.0" layoutY="9.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="115.0" styleClass="classBtn" text="Translate" textFill="#fffafd">
+                    <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                    </font></Button>
+            </children>
+        </Pane>
+      <Pane layoutX="149.0" layoutY="145.0" prefHeight="414.0" prefWidth="664.0" style="-fx-background-radius: 10;">
+         <children>
+            <Pane layoutX="-17.0" opacity="0.39" prefHeight="405.0" prefWidth="699.0" style="-fx-background-color: #96F0FA; -fx-background-radius: 10;" />
+            <Button fx:id="switchBtn" layoutX="270.0" layoutY="39.0" mnemonicParsing="false" onAction="#switchLanguage" prefHeight="39.0" prefWidth="115.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white; -fx-border-width: 2;" styleClass="switchBtn" text="Switch " textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Button>
+            <TextArea id="text-translate" fx:id="inputText" layoutX="1.0" layoutY="91.0" prefHeight="209.0" prefWidth="290.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextArea>
+            <TextArea fx:id="outputText" editable="false" layoutX="371.0" layoutY="91.0" prefHeight="209.0" prefWidth="290.0" styleClass="textBox">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></TextArea>
+            <TextArea id="from-lang" fx:id="inputLang" editable="false" layoutX="93.0" layoutY="35.0" prefHeight="25.0" prefWidth="73.0" styleClass="centeredTextArea" text="en">
+               <font>
+                  <Font size="14.0" />
+               </font></TextArea>
+            <TextArea id="to-lang" fx:id="outputLang" editable="false" layoutX="481.0" layoutY="34.0" prefHeight="25.0" prefWidth="73.0" styleClass="centeredTextArea" text="vi">
+               <font>
+                  <Font size="14.0" />
+               </font></TextArea>
+            <Button layoutX="270.0" layoutY="327.0" mnemonicParsing="false" onAction="#onTranslate" prefHeight="39.0" prefWidth="115.0" styleClass="translate-btn" text="Translate">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

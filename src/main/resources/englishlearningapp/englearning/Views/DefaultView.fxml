@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="englishlearningapp.englearning.Controller.DefaultViewController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true">
+         <image>
+            <Image url="@../src/image/FlatBack.png" />
+         </image>
+      </ImageView>
+
+         <Pane prefHeight="96.0" prefWidth="900.0">
+            <children>
+            <ImageView fitHeight="120.0" fitWidth="158.0" onMouseClicked="#onIconClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../src/image/textOff.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="657.0" layoutY="9.0" mnemonicParsing="false" onAction="#onClickAbout" prefHeight="44.0" prefWidth="115.0" styleClass="classSubBtn" text="About Us" textFill="#fffafd">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="14.0" />
+               </font></Button>
+            <Button layoutX="778.0" layoutY="9.0" mnemonicParsing="false" onAction="#onClickGuide" prefHeight="44.0" prefWidth="115.0" styleClass="classSubBtn" text="Guide" textFill="#fffafd">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="14.0" />
+               </font></Button>
+            <Button fx:id="searchBtn" layoutX="158.0" layoutY="9.0" mnemonicParsing="false" onAction="#clickSearch" prefHeight="44.0" prefWidth="115.0" styleClass="classBtn" text="Search" textFill="#fffafd">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="14.0" />
+               </font></Button>
+            <Button fx:id="gameBtn" layoutX="273.0" layoutY="9.0" mnemonicParsing="false" onAction="#clickGame" prefHeight="44.0" prefWidth="115.0" styleClass="classBtn" text="Game" textFill="#fffafd">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="14.0" />
+               </font></Button>
+            <Button fx:id="translateBtn" layoutX="388.0" layoutY="9.0" mnemonicParsing="false" onAction="#clickTranslate" prefHeight="44.0" prefWidth="115.0" styleClass="classBtn" text="Translate" textFill="#fffafd">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="14.0" />
+               </font></Button>
+            </children>
+         </Pane>
+      <Button layoutX="365.0" layoutY="313.0" mnemonicParsing="false" onAction="#getStarted" opacity="0.89" prefHeight="56.0" prefWidth="188.0" style="-fx-background-radius: 15; -fx-background-color: #f39b6b;" styleClass="classBtn" text="Get Started" textFill="#ffefff">
+         <font>
+            <Font name="Trebuchet MS Bold" size="16.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="225.0" layoutY="214.0" prefHeight="44.0" prefWidth="450.0" text="Learning English with no fee" textFill="#ffefff">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="299.0" layoutY="271.0" prefHeight="20.0" prefWidth="319.0" text="All learners's trusted friend">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
